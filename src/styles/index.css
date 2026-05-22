@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter bg-dark text-white selection:bg-accent-cyan selection:text-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass border border-glass-border backdrop-blur-xl rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-accent-blue to-accent-purple;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-full bg-white text-dark font-semibold transition-all hover:scale-105 active:scale-95 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)];
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-full border border-glass-border bg-glass hover:bg-white/10 transition-all hover:scale-105 active:scale-95;
+  }
+}
+
+/* Lenis CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
