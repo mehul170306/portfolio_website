@@ -4,7 +4,7 @@ import { HERO_CONTENT } from '../data/content';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-vh-100 flex items-center pt-32 pb-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent-blue/20 rounded-full blur-[120px] animate-pulse" />
